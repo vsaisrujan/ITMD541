@@ -1,13 +1,51 @@
-h1{
-color: aqua;
+.first{
+color: goldenrod;
 width:auto;
+position: relative;
+padding-left: 400px;
 }
-h3{
-    color: greenyellow;
+h2 {
+   color:aquamarine;
+   position: relative;
+   padding-left: 400px;
+
+}
+#name{
+    color: black;
     width:auto;
+    position: relative;
+    padding-left: 400px;
     }
 
  p {
     font-family:sans-serif;
     color: chocolate;
+    padding-left: 400px;
  }   
+ .About {
+   font-family: Arial;
+   color:cadetblue
+ }
+
+ nav ul {
+   list-style: none;
+   padding: 0;
+   text-align: center;
+   background-color: #444;
+}
+
+nav li {
+   display: inline;
+   margin: 0 10px;
+}
+
+nav a {
+   text-decoration: none;
+   color: #fff;
+}
+body {
+   font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #444;
+}
