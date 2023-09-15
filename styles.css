@@ -2,29 +2,29 @@
 color: goldenrod;
 width:auto;
 position: relative;
-padding-left: 400px;
+padding-left: 300px;
 }
 h2 {
-   color:aquamarine;
+   color:rgb(251, 127, 255);
    position: relative;
-   padding-left: 400px;
+   padding-left: 300px;
 
 }
 #name{
     color: black;
     width:auto;
     position: relative;
-    padding-left: 400px;
+    padding-left: 300px;
     }
 
  p {
     font-family:sans-serif;
     color: chocolate;
-    padding-left: 400px;
+    padding-left: 300px;
  }   
  .About {
    font-family: Arial;
-   color:cadetblue
+   color:rgb(136, 9, 240)
  }
 
  nav ul {
@@ -43,9 +43,46 @@ nav a {
    text-decoration: none;
    color: #fff;
 }
+.linkpage {
+   font-family:sans-serif;
+   color: rgb(15, 38, 238);
+   padding-left: 300px;
+}  
 body {
    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #444;
+    background-color: lightgray;
+}
+.firstdiv{
+   display: ruby-base-container;
+}
+#seconddiv .box p {
+   font: bold;
+   text-align: center;
+   margin-top: 10px;
+   color: #444;
+   overflow: hidden;
+   margin: 20px auto 0;
+   padding: 4px 23px 6px 22px;
+}
+#seconddiv {
+   display: flex; 
+   margin: 10px auto;
+   padding-left: 280px;
+}
+.box {
+   display: block;
+   text-align: center;
+   justify-content:center;
+   align-items: center;
+   padding: 20px;
+   background-color: #fff;
+   margin: 10px;
+   width: 500px;
+   
+}
+.box img{
+   max-width: 100px;
+   height:auto ;
 }
