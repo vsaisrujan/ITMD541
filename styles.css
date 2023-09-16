@@ -5,7 +5,7 @@ position: relative;
 padding-left: 300px;
 }
 h2 {
-   color:rgb(251, 127, 255);
+   color:rgb(0, 51, 255);
    position: relative;
    padding-left: 300px;
 
@@ -17,14 +17,42 @@ h2 {
     padding-left: 300px;
     }
 
- p {
+ h4 {
     font-family:sans-serif;
     color: chocolate;
     padding-left: 300px;
- }   
+    margin-bottom: 40px;
+ } 
+ p {
+   font-family:sans-serif;
+   color: black;
+   padding-left: 300px;
+ } 
+ .learning {
+   font-family:sans-serif;
+   color: white;
+   padding-left: 600px;
+}  
  .About {
-   font-family: Arial;
-   color:rgb(136, 9, 240)
+   font-family: Bold;
+   font-size: large;
+   font-weight: 500;
+   color:#fff;
+   padding-left: 700px;
+ }
+ .bg-text {
+   background-color: #444;
+   padding: 0 5px;
+   border-radius: 5px;
+   font-size: 20px;
+ }
+ .About1  {
+   font-family: sans-serif;
+   color:rgb(235, 53, 8);
+   padding-left: 300px;
+   font-size: medium;
+   font-display:inherit;
+   border-radius: 5px;
  }
 
  nav ul {
@@ -52,7 +80,7 @@ body {
    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 .firstdiv{
    display: ruby-base-container;
@@ -85,4 +113,32 @@ body {
 .box img{
    max-width: 100px;
    height:auto ;
+}
+#left-image {
+   position: absolute;
+   left: 20px ;
+   top: 8%;
+   border-radius: 60%;
+}
+.email {
+   position: absolute;
+   left:25px;
+   top: 45%;
+   background-color: #3498db;
+   color: #ffffff;
+   padding: 5px 10px;
+   border-radius: 5px;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+}
+.linkedin {
+   position: absolute;
+   left:30px;
+   top: 50%;
+   background-color: #3498db;
+   color: #ffffff;
+   padding: 5px 10px;
+   border-radius: 5px;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
 }
