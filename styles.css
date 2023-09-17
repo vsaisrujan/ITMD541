@@ -83,7 +83,7 @@ body {
     background-color: whitesmoke;
 }
 .firstdiv{
-   display: ruby-base-container;
+   border-style: dashed;
 }
 #seconddiv .box p {
    font: bold;
@@ -98,6 +98,7 @@ body {
    display: flex; 
    margin: 10px auto;
    padding-left: 280px;
+   border-style: dashed;
 }
 .box {
    display: block;
@@ -123,7 +124,7 @@ body {
 .email {
    position: absolute;
    left:25px;
-   top: 45%;
+   top: 47%;
    background-color: #3498db;
    color: #ffffff;
    padding: 5px 10px;
@@ -134,7 +135,7 @@ body {
 .linkedin {
    position: absolute;
    left:30px;
-   top: 50%;
+   top: 54%;
    background-color: #3498db;
    color: #ffffff;
    padding: 5px 10px;
@@ -142,3 +143,16 @@ body {
    font-family: Arial, sans-serif;
    font-size: 16px;
 }
+#location {
+   position:absolute;
+   left: 30px;
+   top: 58%;
+   background-color:#3498db;
+   color: #ffffff;
+   padding: 5px 10px;
+   border-radius: 5px;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+
+}
+
