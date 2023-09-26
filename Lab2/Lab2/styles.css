@@ -1,7 +1,11 @@
 /* Flexbox Part 1 */
 
 #flex-section1 ul {
-
+display : flex;
+justify-content: space-evenly;
+list-style: none;
+margin: 0;
+padding: 0;
 }
 
 /* end Flexbox Part 1 */
@@ -10,23 +14,32 @@
 /* Flexbox Part 2 */
 
 #flex-section2 ul {
+ display: flex;
+ padding-left: 1px;
+ margin: 0;
+ padding: 0;
+ list-style: none;
+
 
 }
 
 #flex-section2 li {
-
+	flex: 1;
+    margin-right: 0;
+	padding-left: 10px;
+	margin: 0;
 }
 
 #flex-section2 .item1 {
-
+order: 1;
 }
 
 #flex-section2 .item2 {
-
+ order: 3;
 }
 
 #flex-section2 .item3 {
-
+ order: 2;
 }
 
 /* end Flexbox Part 2 */
@@ -35,10 +48,18 @@
 /* Flexbox Part 3 */
 
 #flex-section3 .box {
-
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
 
 #flex-section3 .tags ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
 
 }
 
@@ -48,6 +69,10 @@
 /* Grid Part 1 */
 
 #grid-section1 .grid {
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	gap: 20px;
+	grid-auto-rows: 100px;
 
 }
 
