@@ -45,3 +45,21 @@ h2 {
     text-align: center;
     color: #333;
 }
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+
+}
