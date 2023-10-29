@@ -9,17 +9,36 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("input", ToUpdateTip);
 
     function ToUpdateTip() {
-        const bill = parseFloat(billTotal.value);
+        const billInputValue = billTotal.value;
         const tipValue = parseFloat(tip.value);
 
-        if (isNaN(bill)) {
-            alert("Please enter a valid number for the Bill Total.");
+        if (billInputValue === "") {
+            clearFields();
             return;
         }
+
+        if (!isNumeric(billInputValue)) {
+            alert("Please enter a valid number for the Bill Total.");
+            clearFields();
+            return;
+        }
+
+        const bill = parseFloat(billInputValue);
 
         tipPercentage.value = tipValue;
         const tipValueDecimal = (tipValue / 100) * bill;
         tipAmount.value = tipValueDecimal.toFixed(2);
         totalBill.value = (bill + tipValueDecimal).toFixed(2);
+    }
+
+    function clearFields() {
+        billTotal.value = "";
+        tipPercentage.value = "";
+        tipAmount.value = "";
+        totalBill.value = "";
+    }
+
+    function isNumeric(value) {
+        return !isNaN(parseFloat(value)) && isFinite(value);
     }
 });
