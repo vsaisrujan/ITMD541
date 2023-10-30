@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         tipPercentage.value = "";
         tipAmount.value = "";
         totalBill.value = "";
+        tip.value=0;
     }
 
     function isNumeric(value) {
