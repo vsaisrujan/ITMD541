@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sunrise Sunset</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <h1>Sunrise Sunset Dashboard</h1>
+  </header>
+  <main>
+    <div class="search-options">
+      <label for="location">Search Location:</label>
+      <input type="text" id="location" placeholder="Enter a location">
+      <input type="button" onclick="sendRequest();" value="Get Weather"/>
+      <button id="geolocationBtn">Get Current Location</button>
+    </div>
+    <div class="errors">
+      <h2 id="emptyresponse"></h2>  
+    </div>
+    <div class="dashboard"> 
+      <ul id="todayWeatherData">
+        <h2>Today Weather Data</h2>
+        <li>Sunrise: <span id="todaySunrise"></span></li>
+        <li>Sunset: <span id="todaySunset"></span></li>
+        <li>Dawn: <span id="todayDawn"></span></li>
+        <li>Dusk: <span id="todayDusk"></span></li>
+        <li>Day Length: <span id="todayDayLength"></span></li>
+        <li>Solar Noon Time: <span id="todaySolarNoon"></span></li>
+        <li>TimeZone: <span id="todayTimeZone"></span></li>
+      </ul>
+    </div>
+
+    <div class="dashboard2"> 
+        <ul id="tomorrowWeatherData">
+            <h2>Tomorrow's Weather Data</h2>
+            <li>Sunrise: <span id="tomorrowSunrise"></span></li>
+            <li>Sunset: <span id="tomorrowSunset"></span></li>
+            <li>Dawn: <span id="tomorrowDawn"></span></li>
+            <li>Dusk: <span id="tomorrowDusk"></span></li>
+            <li>Day Length: <span id="tomorrowDayLength"></span></li>
+            <li>Solar Noon Time: <span id="tomorrowSolarNoon"></span></li>
+            <li>TimeZone: <span id="tomorrowTimeZone"></span></li>
+        </ul> 
+    </div>
+   
+   
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>
