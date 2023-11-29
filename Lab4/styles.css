@@ -80,7 +80,14 @@ ul {
 li {
     margin-bottom: 5px;
 }
-  
+
+#credit {
+    clear: both; 
+    text-align: center; 
+    padding: 20px 0;  
+    color: white; 
+}
+
 @media (max-width: 600px) {
     .dashboard,
     .dashboard2 {
