@@ -26,38 +26,45 @@ function getLocation() {
 }
 
 
-
-
 async function sendRequest() {
-    var query = encodeURI(document.getElementById("location").value);
+  var query = encodeURI(document.getElementById("location").value);
 
-    // Check if the query is empty or contains only numbers and special characters
-  if (!query || /^[0-9\W_]+$/.test(query)) {
-    clearTodayData();
-    clearTomorrowData();
-    document.getElementById("emptyresponse").innerHTML = "Your search location is not  valid. Please provide a valid search location.";
-    return;
+  try {
+      if (!query || /^[\W_]+$/.test(query) && isNaN(query)) {
+          clearTodayData();
+          clearTomorrowData();
+          document.getElementById("emptyresponse").innerHTML = "Your search location is not valid. Please provide a valid search location.";
+      } else {
+          const response = await fetch("https://geocode.maps.co/search?q=" + query);
+          const data = await response.json();
+
+          if (data.length > 0) {
+              const latitude = data[0].lat;
+              const longitude = data[0].lon;
+              document.getElementById("emptyresponse").innerHTML = "";
+              todayData(latitude, longitude);
+              tomorrowData(latitude, longitude);
+          } else {           
+              if (/^\d+$/.test(query)) {
+                  clearTodayData();
+                  clearTomorrowData();
+                  document.getElementById("emptyresponse").innerHTML = "Your search query did not return any results. Please try again with a different query.";
+              } else {
+                  document.getElementById("emptyresponse").innerHTML = "No matching location found.";
+              }
+          }
+      }
+  } catch (error) {
+      clearTodayData();
+      clearTomorrowData();
+      document.getElementById("emptyresponse").innerHTML = "No matching location found.";
+      console.error('Error during location search:', error);
   }
 
-
-    const response = await fetch("https://geocode.maps.co/search?q="+query);
-    const data = await response.json();
-    //console.log(data);
-    if(data.length>0){
-        const latitude= data[0].lat;
-        const longitude= data[0].lon;
-        document.getElementById("emptyresponse").innerHTML=""
-        todayData(latitude,longitude);
-        //console.log(latitude+" "+longitude);
-        tomorrowData(latitude,longitude);
-        
-    }
-    else{
-        clearTodayData();
-        clearTomorrowData();
-        document.getElementById("emptyresponse").innerHTML="Your search query is not a valid. Please provide a valid search query."
-    }
+  
+  document.getElementById("location").value = "";
 }
+
 
 async function todayData(latitude,longitude){
     const url = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today`
@@ -112,3 +119,4 @@ function clearTomorrowData(){
         document.getElementById("tomorrowSolarNoon").innerHTML="";
         document.getElementById("tomorrowTimeZone").innerHTML="";
 }
+
